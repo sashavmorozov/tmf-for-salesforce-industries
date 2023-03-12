@@ -127,9 +127,14 @@ public with sharing class TMFProductRefOrValue {
         this.name = enrichedRecord.Product2.Name;
         this.orderDate = null; //for future use
 
-        this.place = new List<TMFRelatedPlaceRefOrValue> {
-            new TMFRelatedPlaceRefOrValue(new Account(Id = enrichedRecord.vlocity_cmt__ServiceAccountId__c)) //for future use
-        };
+        if (enrichedRecord.vlocity_cmt__ServiceAccountId__c != null) {
+
+            this.place = new List<TMFRelatedPlaceRefOrValue> {
+                new TMFRelatedPlaceRefOrValue(new Account(Id = enrichedRecord.vlocity_cmt__ServiceAccountId__c))
+            };
+        } else {
+            this.place = null;
+        }
 
         this.product = null; //for future use
         this.productCharacteristic = getOrderItemCharacteristics(enrichedRecord);

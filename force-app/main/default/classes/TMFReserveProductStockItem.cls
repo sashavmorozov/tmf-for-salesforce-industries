@@ -85,10 +85,6 @@ public with sharing class TMFReserveProductStockItem {
     TMFProductRefOrValue requestedProduct;
     String reserveProductStockState;
 
-    public TMFReserveProductStockItem() {
-
-    }
-    
     public TMFReserveProductStockItem(OrderItem orderItem) {
         OrderItem enrichedRecord = enrichInput(orderItem);
 

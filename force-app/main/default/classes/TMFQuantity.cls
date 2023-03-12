@@ -19,31 +19,35 @@ Example:
 Notes:
  - n/a
 
-To do:
- - Add test class
-
 */
 
 
 public with sharing class TMFQuantity {
-    Integer amount = 1;
+    Decimal amount = 1;
     String units;
 
-    public TMFQuantity(Integer amount, String units) {
-        this.amount = amount;
-        this.units = units;
-    }
-
-    public TMFQuantity(Integer amount) {
-        this.amount = amount;
-    }
-
     public TMFQuantity(Decimal amount, String units) {
-      this.amount = (Integer) amount;
+      this.amount = amount;
       this.units = units;
     }
 
     public TMFQuantity(Decimal amount) {
-        this.amount = (Integer) amount;
-  }
+        this.amount = amount;
+    }
+
+    public Decimal getAmount() {
+        return this.amount;
+    }
+
+    public String getUnits() {
+        return this.units;
+    }
+
+    public void setAmount(Decimal amount) {
+        this.amount = amount;
+    }
+
+    public void setUnits() {
+        this.units = units;
+    }
 }

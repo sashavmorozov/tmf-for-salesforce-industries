@@ -55,8 +55,8 @@ public with sharing class TMFRelatedEntity {
         this.at_schemaLocation = null; //for future use 
         this.at_type = 'EntityRef';
         this.href = URL.getSalesforceBaseUrl().toExternalForm() + '/' + enrichedRecord.Id;
-        this.id = enrichedRecord.Id; //for future use 
-        this.name = enrichedRecord.Name; //for future use 
+        this.id = enrichedRecord.Id; 
+        this.name = enrichedRecord.Name; 
         this.role = 'Related order'; 
     }
 

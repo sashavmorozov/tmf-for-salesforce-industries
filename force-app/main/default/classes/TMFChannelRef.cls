@@ -31,13 +31,13 @@ To do:
 
 public with sharing class TMFChannelRef {
 
-    String at_baseType;
-    String at_referredType;
-    String at_schemaLocation;
-    String at_type;
-    String href;
-    String id;
-    String name;
+    private String at_baseType;
+    private String at_referredType;
+    private String at_schemaLocation;
+    private String at_type;
+    private String href;
+    private String id;
+    private String name;
 
     public TMFChannelRef(String name) {
         this.at_baseType = null; //for future use
@@ -46,6 +46,62 @@ public with sharing class TMFChannelRef {
         this.at_type = null; //for future use
         this.href = null; //for future use
         this.id = null; //for future use
-        this.name = name; //for future use
+        this.name = name;
+    }
+
+    public String getAt_baseType() {
+        return at_baseType;
+    }
+
+    public void setAt_baseType(String at_baseType) {
+        this.at_baseType = at_baseType;
+    }
+
+    public String getAt_referredType() {
+        return at_referredType;
+    }
+
+    public void setAt_referredType(String at_referredType) {
+        this.at_referredType = at_referredType;
+    }
+
+    public String getAt_schemaLocation() {
+        return at_schemaLocation;
+    }
+
+    public void setAt_schemaLocation(String at_schemaLocation) {
+        this.at_schemaLocation = at_schemaLocation;
+    }
+
+    public String getAt_type() {
+        return at_type;
+    }
+
+    public void setAt_type(String at_type) {
+        this.at_type = at_type;
+    }
+
+    public String getHref() {
+        return href;
+    }
+
+    public void setHref(String href) {
+        this.href = href;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
